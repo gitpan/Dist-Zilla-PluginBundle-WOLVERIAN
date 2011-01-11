@@ -1,6 +1,6 @@
 package Dist::Zilla::PluginBundle::WOLVERIAN;
 BEGIN {
-  $Dist::Zilla::PluginBundle::WOLVERIAN::VERSION = 'v0.0.3'; # TRIAL
+  $Dist::Zilla::PluginBundle::WOLVERIAN::VERSION = 'v0.0.3';
 }
 
 use MooseX::Declare;
@@ -33,7 +33,10 @@ class Dist::Zilla::PluginBundle::WOLVERIAN
             remove => ["MakeMaker"]
         });
 
-        $self->add_bundle("Git");
+        $self->add_bundle(Git => {
+            tag_format  => '%v',
+            tag_message => '%v'
+        });
 
         $self->add_plugins(qw/
             ModuleBuild
