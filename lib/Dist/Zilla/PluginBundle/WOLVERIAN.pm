@@ -1,11 +1,11 @@
 package Dist::Zilla::PluginBundle::WOLVERIAN;
 BEGIN {
-  $Dist::Zilla::PluginBundle::WOLVERIAN::VERSION = '0.0.2'; # TRIAL
+  $Dist::Zilla::PluginBundle::WOLVERIAN::VERSION = 'v0.0.3'; # TRIAL
 }
 
 use MooseX::Declare;
 
-# ABSTRACT: TODO
+# ABSTRACT: Dist::Zilla according to wolverian
 class Dist::Zilla::PluginBundle::WOLVERIAN
     with Dist::Zilla::Role::PluginBundle::Easy {
 
@@ -15,6 +15,8 @@ class Dist::Zilla::PluginBundle::WOLVERIAN
     use Dist::Zilla::Plugin::MetaJSON;
     use Dist::Zilla::Plugin::PodWeaver;
     use Dist::Zilla::Plugin::InstallGuide;
+
+    use Dist::Zilla::Plugin::Git;
 
     use Dist::Zilla::Plugin::MetaTests;
     use Dist::Zilla::Plugin::PodSyntaxTests;
@@ -27,13 +29,16 @@ class Dist::Zilla::PluginBundle::WOLVERIAN
 
     method configure {
         $self->add_bundle(Filter => {
-            bundle => "Basic",
-            remove => "MakeMaker"
+            bundle => '@Basic',
+            remove => ["MakeMaker"]
         });
+
+        $self->add_bundle("Git");
 
         $self->add_plugins(qw/
             ModuleBuild
             AutoPrereqs
+            PkgVersion
             MinimumPerl
             MetaJSON
             PodWeaver
@@ -47,7 +52,15 @@ class Dist::Zilla::PluginBundle::WOLVERIAN
 
             Bugtracker
             Repository
+            GithubMeta
         /);
+
+        $self->add_plugins([
+            "Git::NextVersion" => {
+                first_version  => "v0.0.1",
+                version_regexp => '^(v.+)$'
+            }
+        ]);
     }
 }
 
@@ -58,11 +71,11 @@ __END__
 
 =head1 NAME
 
-Dist::Zilla::PluginBundle::WOLVERIAN - TODO
+Dist::Zilla::PluginBundle::WOLVERIAN - Dist::Zilla according to wolverian
 
 =head1 VERSION
 
-version 0.0.2
+version v0.0.3
 
 =head1 AUTHOR
 

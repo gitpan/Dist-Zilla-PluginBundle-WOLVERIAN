@@ -12,12 +12,12 @@ my %module_build_args = (
   'configure_requires' => {
     'Module::Build' => '0.3601'
   },
-  'dist_abstract' => 'TODO',
+  'dist_abstract' => 'Dist::Zilla according to wolverian',
   'dist_author' => [
     'Ilmari Vacklin <ilmari.vacklin@cs.helsinki.fi>'
   ],
   'dist_name' => 'Dist-Zilla-PluginBundle-WOLVERIAN',
-  'dist_version' => '0.0.2',
+  'dist_version' => 'v0.0.3',
   'license' => 'perl',
   'module_name' => 'Dist::Zilla::PluginBundle::WOLVERIAN',
   'recommends' => {},
@@ -26,6 +26,7 @@ my %module_build_args = (
     'Dist::Zilla::Plugin::AutoPrereqs' => '0',
     'Dist::Zilla::Plugin::Bugtracker' => '0',
     'Dist::Zilla::Plugin::EOLTests' => '0',
+    'Dist::Zilla::Plugin::Git' => '0',
     'Dist::Zilla::Plugin::InstallGuide' => '0',
     'Dist::Zilla::Plugin::MetaJSON' => '0',
     'Dist::Zilla::Plugin::MetaTests' => '0',
