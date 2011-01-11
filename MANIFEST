@@ -1,0 +1,9 @@
+Build.PL
+INSTALL
+LICENSE
+MANIFEST
+META.json
+META.yml
+README
+dist.ini
+lib/Dist/Zilla/PluginBundle/WOLVERIAN.pm
