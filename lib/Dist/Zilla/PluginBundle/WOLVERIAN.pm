@@ -1,6 +1,6 @@
 package Dist::Zilla::PluginBundle::WOLVERIAN;
 BEGIN {
-  $Dist::Zilla::PluginBundle::WOLVERIAN::VERSION = 'v0.0.6'; # TRIAL
+  $Dist::Zilla::PluginBundle::WOLVERIAN::VERSION = 'v0.0.7';
 }
 
 use MooseX::Declare;
@@ -80,7 +80,7 @@ Dist::Zilla::PluginBundle::WOLVERIAN - Dist::Zilla according to wolverian
 
 =head1 VERSION
 
-version v0.0.6
+version v0.0.7
 
 =head1 AUTHOR
 

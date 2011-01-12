@@ -18,7 +18,7 @@ my %module_build_args = (
     'Ilmari Vacklin <ilmari.vacklin@cs.helsinki.fi>'
   ],
   'dist_name' => 'Dist-Zilla-PluginBundle-WOLVERIAN',
-  'dist_version' => 'v0.0.6',
+  'dist_version' => 'v0.0.7',
   'license' => 'perl',
   'module_name' => 'Dist::Zilla::PluginBundle::WOLVERIAN',
   'recommends' => {},
