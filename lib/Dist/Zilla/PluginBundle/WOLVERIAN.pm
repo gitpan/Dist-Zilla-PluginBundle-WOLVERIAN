@@ -1,6 +1,6 @@
 package Dist::Zilla::PluginBundle::WOLVERIAN;
 BEGIN {
-  $Dist::Zilla::PluginBundle::WOLVERIAN::VERSION = 'v0.0.4';
+  $Dist::Zilla::PluginBundle::WOLVERIAN::VERSION = 'v0.0.4'; # TRIAL
 }
 
 use MooseX::Declare;
