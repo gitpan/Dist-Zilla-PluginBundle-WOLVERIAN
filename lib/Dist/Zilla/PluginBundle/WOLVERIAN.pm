@@ -1,6 +1,6 @@
 package Dist::Zilla::PluginBundle::WOLVERIAN;
 BEGIN {
-  $Dist::Zilla::PluginBundle::WOLVERIAN::VERSION = 'v0.0.5'; # TRIAL
+  $Dist::Zilla::PluginBundle::WOLVERIAN::VERSION = 'v0.0.6'; # TRIAL
 }
 
 use MooseX::Declare;
@@ -29,11 +29,13 @@ class Dist::Zilla::PluginBundle::WOLVERIAN
 
     method configure {
         $self->add_bundle(Filter => {
-            bundle => '@Basic',
-            remove => ["MakeMaker"]
+            -bundle => '@Basic',
+            -remove => ["MakeMaker"]
         });
 
-        $self->add_bundle(Git => {
+        $self->add_bundle(Filter => {
+            -bundle     => '@Git',
+            -remove     => ['Git::Commit'],
             tag_format  => '%v',
             tag_message => '%v'
         });
@@ -78,7 +80,7 @@ Dist::Zilla::PluginBundle::WOLVERIAN - Dist::Zilla according to wolverian
 
 =head1 VERSION
 
-version v0.0.5
+version v0.0.6
 
 =head1 AUTHOR
 
