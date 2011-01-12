@@ -41,7 +41,12 @@
             "Dist::Zilla::Plugin::PodWeaver" : 0,
             "Dist::Zilla::Plugin::Repository" : 0,
             "MooseX::Declare" : 0,
-            "perl" : "5.004"
+            "perl" : "5.006"
+         }
+      },
+      "test" : {
+         "requires" : {
+            "Test::More" : 0
          }
       }
    },
@@ -58,6 +63,6 @@
          "web" : "http://github.com/wolverian/Dist-Zilla-PluginBundle-WOLVERIAN/tree"
       }
    },
-   "version" : "v0.0.3"
+   "version" : "v0.0.4"
 }
 

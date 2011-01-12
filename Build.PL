@@ -7,7 +7,8 @@ use Module::Build 0.3601;
 
 my %module_build_args = (
   'build_requires' => {
-    'Module::Build' => '0.3601'
+    'Module::Build' => '0.3601',
+    'Test::More' => '0'
   },
   'configure_requires' => {
     'Module::Build' => '0.3601'
@@ -17,7 +18,7 @@ my %module_build_args = (
     'Ilmari Vacklin <ilmari.vacklin@cs.helsinki.fi>'
   ],
   'dist_name' => 'Dist-Zilla-PluginBundle-WOLVERIAN',
-  'dist_version' => 'v0.0.3',
+  'dist_version' => 'v0.0.4',
   'license' => 'perl',
   'module_name' => 'Dist::Zilla::PluginBundle::WOLVERIAN',
   'recommends' => {},
@@ -38,7 +39,7 @@ my %module_build_args = (
     'Dist::Zilla::Plugin::PodWeaver' => '0',
     'Dist::Zilla::Plugin::Repository' => '0',
     'MooseX::Declare' => '0',
-    'perl' => '5.004'
+    'perl' => '5.006'
   },
   'script_files' => []
 );

@@ -4,6 +4,7 @@ author:
   - 'Ilmari Vacklin <ilmari.vacklin@cs.helsinki.fi>'
 build_requires:
   Module::Build: 0.3601
+  Test::More: 0
 configure_requires:
   Module::Build: 0.3601
 dynamic_config: 0
@@ -29,9 +30,9 @@ requires:
   Dist::Zilla::Plugin::PodWeaver: 0
   Dist::Zilla::Plugin::Repository: 0
   MooseX::Declare: 0
-  perl: 5.004
+  perl: 5.006
 resources:
   bugtracker: http://rt.cpan.org/Public/Dist/Display.html?Name=Dist-Zilla-PluginBundle-WOLVERIAN
   homepage: http://github.com/wolverian/Dist-Zilla-PluginBundle-WOLVERIAN/tree
   repository: git://github.com/wolverian/Dist-Zilla-PluginBundle-WOLVERIAN.git
-version: v0.0.3
+version: v0.0.4
